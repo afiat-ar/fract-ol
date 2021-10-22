@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_hook.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:01:11 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/20 12:48:09 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/22 10:13:32 by andoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	key_hook(int keycode, t_img_data *data)
 {
-	if (keycode == 53)
+	printf("keycode = %d\n", keycode);
+	if (keycode == 53 || keycode == 65307)
 		exit(0);
 	if (keycode >= 18 && keycode <= 23)
 		ft_set_new_color(keycode, data);

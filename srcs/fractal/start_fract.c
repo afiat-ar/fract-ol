@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   start_fract.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:22:29 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/19 17:07:48 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/22 10:14:56 by andoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ void	my_mlx_pixel_put(t_img_data *data, int x, int y, int color)
 
 void	ft_solve_color(t_img_data data, t_fract fract)
 {
-	if (fract.i == 50)
+	if (fract.i == 100)
 		my_mlx_pixel_put(&data, fract.x, fract.y, 0x000000);
-	else if (fract.i < 40 && fract.i >= 30)
+	else if (fract.i < 100 && fract.i >= 50)
 		my_mlx_pixel_put(&data, fract.x, fract.y, data.color * fract.i * 1.5);
-	else if (fract.i < 20)
+	else if (fract.i < 50)
 		my_mlx_pixel_put(&data, fract.x, fract.y, data.color * fract.i * 2);
-	else if (fract.i < 10)
+	else if (fract.i < 20)
 		my_mlx_pixel_put(&data, fract.x, fract.y, data.color + fract.i);
 }
 

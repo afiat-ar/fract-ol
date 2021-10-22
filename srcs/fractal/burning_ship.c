@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   burning_ship.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 10:43:03 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/19 16:42:07 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/22 10:15:16 by andoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_resolve_burning_ship(t_img_data data, t_fract *fract)
 {
 	int	max_iter;
 
-	max_iter = 50;
+	max_iter = 100;
 	fract->i = 0;
 	fract->a = ft_scale(data.size, fract->x, data.max_x, data.min_x);
 	fract->b = ft_scale(data.size, fract->y, data.max_y, data.min_y);

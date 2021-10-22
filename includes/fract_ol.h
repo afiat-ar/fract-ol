@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   fract_ol.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 08:34:45 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/20 13:01:52 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/22 10:06:54 by andoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACT_OL_H
 # define FRACT_OL_H
 
-#include "./minilibx/mlx.h"
+#include "./minilibx-linux/mlx.h"
 #include "./get_next_line/get_next_line.h"
 #include "./libft/libft.h"
 #include "printf_colors.h" 
