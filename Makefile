@@ -18,13 +18,14 @@ FILES = main/main								\
 		srcs/check_and_init/printf_colors2		\
 		srcs/check_and_init/launch_header		\
 		srcs/errors/initial_errors				\
+		srcs/utils/utils						\
 
 RM = rm -rf
 CC = clang
 CFLAGS =
 CFLAGS += -fsanitize=address -g3
-FFLAGS = -lm -lmlx -lXext -lX11
-#-framework OpenGL -framework AppKit
+FFLAGS = -framework OpenGL -framework AppKit
+#-lm -lmlx -lXext -lX11
 
 SRCS = $(addsuffix .c, $(FILES))
 OBJS = $(addsuffix .o, $(FILES))
@@ -33,14 +34,14 @@ OBJS = $(addsuffix .o, $(FILES))
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
-	$(MAKE) -C ./includes/minilibx-linux/
+	$(MAKE) -C ./includes/minilibx/
 	$(MAKE) -C ./includes/libft/
-	mv ./includes/minilibx-linux/libmlx.a .
+	mv ./includes/minilibx/libmlx.a .
 	mv ./includes/libft/libft.a .
 	$(CC) $(CFLAGS) $(OBJS) -L . libft.a -lmlx $(FFLAGS) -o $(NAME)
 
 clean:
-	$(MAKE) -C ./includes/minilibx-linux/ clean
+	$(MAKE) -C ./includes/minilibx/ clean
 	$(MAKE) -C ./includes/libft/ clean
 	$(RM) $(OBJS)
 

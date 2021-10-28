@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_hook.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
+/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:01:11 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/22 10:13:32 by andoni           ###   ########.fr       */
+/*   Updated: 2021/10/28 10:14:49 by afiat-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	key_hook(int keycode, t_img_data *data)
 {
-	printf("keycode = %d\n", keycode);
 	if (keycode == 53 || keycode == 65307)
 		exit(0);
 	if (keycode >= 18 && keycode <= 23)

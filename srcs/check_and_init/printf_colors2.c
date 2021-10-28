@@ -6,24 +6,23 @@
 /*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 11:49:08 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/15 11:50:52 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/28 09:48:42 by afiat-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/fract_ol.h"
 
-void	ft_yellow()
+void	ft_yellow(void)
 {
 	printf("\033[0;33m");
 }
 
-void	ft_blue()
+void	ft_blue(void)
 {
 	printf("\033[0;34m");
 }
 
-void	ft_cyan()
+void	ft_cyan(void)
 {
 	printf("\033[0;36m");
 }
-

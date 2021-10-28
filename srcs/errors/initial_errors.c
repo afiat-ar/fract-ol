@@ -6,14 +6,13 @@
 /*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 11:50:54 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/15 11:57:26 by afiat-ar         ###   ########.fr       */
+/*   Updated: 2021/10/28 09:58:28 by afiat-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../../includes/fract_ol.h"
 
-static void	ft_julia_list()
+static void	ft_julia_list(void)
 {
 	int		fd;
 	char	*fract;
@@ -32,14 +31,14 @@ static void	ft_julia_list()
 		if (!fract)
 			break ;
 		fract = ft_clear_str(fract);
-		printf("			%s\n",fract);
+		printf("			%s\n", fract);
 	}
 	ft_white();
-	printf("-----------------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
 	close(fd);
 }
 
-static void	ft_print_list()
+static void	ft_print_list(void)
 {
 	int		fd;
 	char	*fract;
@@ -58,27 +57,26 @@ static void	ft_print_list()
 		if (!fract)
 			break ;
 		fract = ft_clear_str(fract);
-		printf("%d -	%s\n",i, fract);
+		printf("%d -	%s\n", i, fract);
 		i++;
 	}
 	ft_white();
-	printf("-----------------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
 	ft_julia_list();
 	close(fd);
-
 }
 
-void	ft_initials_errors()
+void	ft_initials_errors(void)
 {
 	ft_red();
 	printf("Error, invalid arguments\n");
 	ft_white();
-	printf("-----------------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
 	ft_green();
 	printf("Try to execute: ");
 	ft_purple();
 	printf("./fractol.a <fractal_name>'\n");
 	ft_white();
-	printf("-----------------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
 	ft_print_list();
 }

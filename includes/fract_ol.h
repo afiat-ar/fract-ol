@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   fract_ol.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andoni <andoni@student.42.fr>              +#+  +:+       +#+        */
+/*   By: afiat-ar <afiat-ar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 08:34:45 by afiat-ar          #+#    #+#             */
-/*   Updated: 2021/10/22 10:06:54 by andoni           ###   ########.fr       */
+/*   Updated: 2021/10/28 12:21:24 by afiat-ar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACT_OL_H
 # define FRACT_OL_H
 
-#include "./minilibx-linux/mlx.h"
-#include "./get_next_line/get_next_line.h"
-#include "./libft/libft.h"
-#include "printf_colors.h" 
-#include "keys.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <math.h>
+# include "./minilibx/mlx.h"
+# include "./get_next_line/get_next_line.h"
+# include "./libft/libft.h"
+# include "printf_colors.h" 
+# include "keys.h"
+# include <stdio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <math.h>
 
-typedef struct	s_img_data
+typedef struct s_img_data
 {
 	void	*mlx;
 	void	*win;
@@ -40,11 +40,13 @@ typedef struct	s_img_data
 	double	min_y;
 	double	pos_a;
 	double	pos_b;
+	double	abs_x;
+	double	abs_y;
 	int		color;
 	char	**argv;
 }	t_img_data;
 
-typedef struct	s_fract
+typedef struct s_fract
 {
 	int		i;
 	int		x;
@@ -59,8 +61,8 @@ typedef struct	s_fract
 }	t_fract;
 
 char	*ft_check_input(char *argv);
-void	ft_launch_header();
-void	ft_initials_errors();
+void	ft_launch_header(void);
+void	ft_initials_errors(void);
 void	ft_init(t_img_data *data);
 void	ft_start_fract(t_img_data data);
 void	ft_mandelbrot(t_img_data data);
@@ -81,5 +83,7 @@ void	my_mlx_pixel_put(t_img_data *data, int x, int y, int color);
 char	*ft_clear_str(char *fract);
 int		zoom(int keycode, int x, int y, t_img_data *data);
 void	ft_move_pos(int keycode, t_img_data *data);
+double	ft_fabs(double num);
+double ft_atof(const char *s);
 
 #endif
